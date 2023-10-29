@@ -717,6 +717,7 @@ func _do_transforms_ready(new_trs: Array):
 	if not transforms or transforms.is_empty():
 		clear_output()
 		update_gizmos()
+		build_completed.emit()
 		return
 
 	match render_mode:
